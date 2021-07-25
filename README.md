@@ -17,6 +17,10 @@ The microservice project have a dependency on `maven`.
 
 Run `npm install -g maven` to install the `maven` plugin globally.
 
+The angular application project has a dependency on `angular-cli`
+
+run `npm install -g @angular/cli` to install the `angular-cli`plugin globally.
+
 ## Running the `node` microservice
 
 Change directory to `dashboard-service` directory.
@@ -33,6 +37,6 @@ Change directory to `dashboard-ui` directory.
 
 Run `npm install`.
 
-Run `npm start`
+Run `ng serve`
 
 This will start the application on the default port 4200

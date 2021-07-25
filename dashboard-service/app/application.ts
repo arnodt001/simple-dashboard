@@ -1,13 +1,13 @@
-import fastify, {FastifyInstance} from "fastify";
-import {IncomingMessage, Server, ServerResponse} from "http";
-import {usersDb} from "./db/users.db";
+import fastify, { FastifyInstance } from "fastify";
+import { IncomingMessage, Server, ServerResponse } from "http";
+import { usersDb } from "./db/users.db";
 import fastifyCors from "fastify-cors";
 
 /**
  * Define an initialise fastify server
  */
 export const server: FastifyInstance<Server, IncomingMessage, ServerResponse> =
-    fastify();
+  fastify();
 
 /**
  * Configure default CORS setting. No additional requirements for CORS
@@ -15,11 +15,11 @@ export const server: FastifyInstance<Server, IncomingMessage, ServerResponse> =
  * Define users GET endpoint
  */
 function build(): void {
-    server.register(fastifyCors);
+  server.register(fastifyCors);
 
-    server.get("/api/dashboard/users", async () => {
-        return usersDb;
-    });
+  server.get("/api/dashboard/users", async () => {
+    return usersDb;
+  });
 }
 
 export default build;
